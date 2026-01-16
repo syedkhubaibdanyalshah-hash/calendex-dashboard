@@ -52,3 +52,62 @@
   opacity: 1;
   transition: filter 0.3s ease;
 }
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 70px;
+  }
+  
+  .sidebar-icon-container {
+    height: 32px;
+    width: 35px;
+    margin: 8px auto;
+  }
+  
+  .sidebar-img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    padding: 8px 0;
+  }
+  
+  .sidebar-icon-container {
+    height: 30px;
+    width: 32px;
+    margin: 6px auto;
+  }
+  
+  .sidebar-img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .sidebar-bottom {
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 50px;
+    padding: 6px 0;
+  }
+  
+  .sidebar-icon-container {
+    height: 28px;
+    width: 30px;
+    margin: 5px auto;
+  }
+  
+  .sidebar-img {
+    width: 18px;
+    height: 18px;
+  }
+}

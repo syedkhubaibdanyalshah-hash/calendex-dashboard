@@ -130,3 +130,124 @@
     text-align: right;
   }
 }
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .campaign-body {
+    padding: 20px;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .left-card {
+    margin-left: 0;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .cards-grid {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .card {
+    min-width: 100%;
+  }
+  
+  .next-button5-container {
+    position: static;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .next-btn5 {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .campaign-body {
+    padding: 15px;
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .left-card {
+    width: 100%;
+  }
+  
+  .left-card .card {
+    min-width: 100%;
+  }
+  
+  .card {
+    padding: 6px 25px;
+    min-height: 40px !important;
+  }
+  
+  .card-label {
+    font-size: 11px;
+  }
+  
+  .card-value {
+    font-size: 13px;
+  }
+  
+  .next-button5-container {
+    height: auto;
+    padding: 15px;
+  }
+  
+  .next-btn5 {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+    top: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .campaign-body {
+    padding: 10px;
+  }
+  
+  .cards-grid {
+    gap: 12px;
+  }
+  
+  .card {
+    padding: 6px 20px;
+    min-height: 38px !important;
+  }
+  
+  .card-label {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+  
+  .card-value {
+    font-size: 12px;
+  }
+  
+  .dropdown-arrow {
+    right: 12px;
+    font-size: 9px;
+  }
+  
+  .next-btn5 {
+    font-size: 13px;
+    padding: 8px 20px;
+    height: 42px;
+  }
+}

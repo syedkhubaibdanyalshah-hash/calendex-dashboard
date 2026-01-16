@@ -478,3 +478,146 @@
   border-color: #007bff;
   color: #000000;
 }
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .page-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .components-panel {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .fourth-notification-container {
+    margin-left: 50%;
+    max-width: 90%;
+  }
+  
+  .next-button-container,
+  .menu-panel {
+    position: static !important;
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 10px;
+  }
+  
+  .components-panel {
+    padding: 4px 15px 100px 15px;
+  }
+  
+  .component-name {
+    font-size: 12px;
+  }
+  
+  .fourth-notification-container {
+    margin-left: 50%;
+    max-width: 95%;
+  }
+  
+  .fourth-notification-card {
+    padding: 12px 20px;
+  }
+  
+  .fourth-appointment-modal {
+    min-height: 400px;
+  }
+  
+  .fourth-modal-content {
+    padding: 25px 20px 20px;
+  }
+  
+  .fourth-modal-title {
+    font-size: 22px;
+  }
+  
+  .fourth-modal-subtitle {
+    font-size: 14px;
+  }
+  
+  .fourth-appointment-container {
+    max-width: 90%;
+    padding: 20px 15px;
+  }
+  
+  .fourth-appointment-comparison {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .fourth-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .fourth-ok-button {
+    min-width: 200px;
+    padding: 10px 30px;
+  }
+  
+  .next-button-floating {
+    min-width: 150px;
+    width: 100%;
+  }
+  
+  .menu-panel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .component-item {
+    padding: 0px 12px 0px 0px;
+  }
+  
+  .component-name {
+    font-size: 11px;
+  }
+  
+  .component-add {
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .fourth-notification-title {
+    font-size: 14px;
+  }
+  
+  .fourth-modal-title {
+    font-size: 20px;
+  }
+  
+  .fourth-modal-subtitle {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+  
+  .fourth-appointment-time {
+    min-width: 120px;
+    padding: 14px 16px;
+  }
+  
+  .fourth-date, .fourth-time {
+    font-size: 13px;
+  }
+  
+  .fourth-ok-button {
+    min-width: 180px;
+    font-size: 15px;
+    padding: 10px 25px;
+  }
+  
+  .fourth-upload-container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
