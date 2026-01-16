@@ -487,32 +487,50 @@
 }
 
 @media (max-width: 1024px) {
+  .preview-cards-section {
+    margin-top: 24px;
+    padding: 0 16px;
+  }
+  
   .preview-cards-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-    max-width: 626px;
+    max-width: 100%;
     margin: 0 auto;
   }
   
   .preview-card {
     width: 100%;
+    max-width: 100%;
     padding: 20px;
+    height: auto;
+    min-height: auto;
+  }
+  
+  .preview-card-title {
+    font-size: 17px;
+    margin-bottom: 18px;
   }
   
   .notification-preview {
     margin-left: auto;
     margin-right: auto;
+    max-width: 400px;
+    width: 100%;
   }
   
   .in-app-content {
     margin-left: auto;
     margin-right: auto;
+    max-width: 400px;
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .preview-cards-section {
     padding: 0 16px;
+    margin-top: 20px;
   }
   
   .preview-cards-grid {
@@ -523,6 +541,7 @@
   .preview-card {
     padding: 18px;
     min-height: auto;
+    border-radius: 10px;
   }
   
   .preview-card-title {
@@ -534,10 +553,14 @@
     max-width: 100%;
     padding: 12px;
     margin-top: 1rem;
+    height: auto;
+    min-height: auto;
   }
   
   .notification-content {
     padding: 14px;
+    width: 100%;
+    height: auto;
   }
   
   .notification-icon .app-icon {
@@ -553,9 +576,22 @@
     font-size: 13px;
   }
   
+  .notification-action {
+    width: auto;
+    max-width: 150px;
+  }
+  
+  .tap-to-view {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
   .in-app-content {
     padding: 20px;
     max-width: 100%;
+    height: auto;
+    min-height: auto;
   }
   
   .in-app-title {
@@ -572,6 +608,9 @@
     gap: 12px;
     padding: 12px;
     max-width: 100%;
+    width: 100%;
+    height: auto;
+    min-height: auto;
   }
   
   .time-section {
@@ -597,6 +636,7 @@
 @media (max-width: 640px) {
   .preview-cards-section {
     padding: 0 12px;
+    margin-top: 18px;
   }
   
   .preview-cards-grid {
@@ -655,6 +695,11 @@
     min-height: auto;
   }
   
+  .success-icon img {
+    width: 70px;
+    height: 70px;
+  }
+  
   .in-app-title {
     font-size: 17px;
   }
@@ -693,6 +738,7 @@
 @media (max-width: 480px) {
   .preview-cards-section {
     padding: 0 8px;
+    margin-top: 16px;
   }
   
   .preview-cards-grid {
@@ -760,6 +806,11 @@
     font-size: 20px;
   }
   
+  .success-icon img {
+    width: 60px;
+    height: 60px;
+  }
+  
   .in-app-title {
     font-size: 16px;
   }
@@ -796,6 +847,41 @@
     padding: 9px 20px;
     font-size: 14px;
     height: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .preview-cards-section {
+    padding: 0 6px;
+  }
+  
+  .preview-card {
+    padding: 12px;
+  }
+  
+  .preview-card-title {
+    font-size: 13px;
+  }
+  
+  .notification-preview,
+  .in-app-content {
+    padding: 8px;
+  }
+  
+  .notification-title,
+  .in-app-title {
+    font-size: 12px;
+  }
+  
+  .notification-message,
+  .in-app-message {
+    font-size: 10px;
+  }
+  
+  .ok-button {
+    font-size: 13px;
+    height: 38px;
+    padding: 8px 16px;
   }
 }
 @media (max-width: 1024px) {
