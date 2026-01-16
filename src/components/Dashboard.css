@@ -1130,39 +1130,3 @@
     padding: 14px;
   }
 }
-  
-  .stat-card {
-    padding: 12px;
-  }
-  
-  .stat-value {
-    font-size: 24px;
-  }
-  
-  .chart-section {
-    padding: 12px;
-  }
-  
-  .chart-placeholder {
-    height: 250px;
-  }
-  
-  .preview-cards-grid {
-    padding: 0 4px;
-    gap: 12px;
-  }
-  
-  .preview-card {
-    padding: 12px;
-  }
-  
-  .notification-content,
-  .in-app-content {
-    padding: 12px;
-  }
-  
-  .time-box {
-    padding: 8px;
-    font-size: 11px;
-  }
-}
