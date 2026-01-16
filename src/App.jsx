@@ -26,54 +26,73 @@ import SixthList from './components/SixthList'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard')
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false)
+  }
 
   const handleCreateNewClick = () => {
     setCurrentPage('templateList')
+    closeSidebar()
   }
 
   const handleBackToDashboard = () => {
     setCurrentPage('dashboard')
+    closeSidebar()
   }
 
   const handleCircleClick = () => {
     setCurrentPage('thirdPage')
+    closeSidebar()
   }
 
   const handleBackToTemplateList = () => {
     setCurrentPage('templateList')
+    closeSidebar()
   }
 
   const handleNextToFourth = () => {
     setCurrentPage('fourthPage')
+    closeSidebar()
   }
 
   const handleBackToThird = () => {
     setCurrentPage('thirdPage')
+    closeSidebar()
   }
 
   const handleNextToFifth = () => {
     setCurrentPage('fifthPage')
+    closeSidebar()
   }
 
   const handleBackToFourth = () => {
     setCurrentPage('fourthPage')
+    closeSidebar()
   }
 
   const handleNextToSixth = () => {
     setCurrentPage('sixthPage')
+    closeSidebar()
   }
 
   const handleBackToFifth = () => {
     setCurrentPage('fifthPage')
+    closeSidebar()
   }
 
   if (currentPage === 'dashboard') {
     return (
       <div className="min-h-screen bg-gray-50">
         <Navbar />
-        <Header onCreateNewClick={handleCreateNewClick} />
+        <Header onCreateNewClick={handleCreateNewClick} onMenuClick={toggleSidebar} />
         <div className="flex">
-          <Sidebar />
+          <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
           <main className="flex-1">
             <Dashboard />
           </main>
@@ -86,9 +105,9 @@ function App() {
     return (
       <div className="min-h-screen bg-gray-50">
         <ThirdNavbar onBackClick={handleBackToTemplateList} />
-        <ThirdHeader onBackClick={handleBackToTemplateList} />
+        <ThirdHeader onBackClick={handleBackToTemplateList} onMenuClick={toggleSidebar} />
         <div className="flex">
-          <ThirdSidebar />
+          <ThirdSidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
           <main className="flex-1">
             <ThirdList onNext={handleNextToFourth} />
           </main>
@@ -101,9 +120,9 @@ function App() {
     return (
       <div className="min-h-screen bg-gray-50">
         <FourthNavbar onBackClick={handleBackToThird} />
-        <FourthHeader />
+        <FourthHeader onMenuClick={toggleSidebar} />
         <div className="flex">
-          <FourthSidebar />
+          <FourthSidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
           <main className="flex-1">
             <FourthList onNext={handleNextToFifth} />
           </main>
@@ -116,9 +135,9 @@ function App() {
     return (
       <div className="min-h-screen bg-gray-50">
         <FifthNavbar onBackClick={handleBackToFourth} />
-        <FifthHeader />
+        <FifthHeader onMenuClick={toggleSidebar} />
         <div className="flex">
-          <FifthSidebar />
+          <FifthSidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
           <main className="flex-1">
             <FifthList onNext={handleNextToSixth} />
           </main>
@@ -131,9 +150,9 @@ function App() {
     return (
       <div className="min-h-screen bg-gray-50">
         <SixthNavbar onBackClick={handleBackToFifth} />
-        <SixthHeader />
+        <SixthHeader onMenuClick={toggleSidebar} />
         <div className="flex">
-          <SixthSidebar />
+          <SixthSidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
           <main className="flex-1">
             <SixthList />
           </main>
@@ -145,9 +164,9 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <TemplateNavbar onBackClick={handleBackToDashboard} />
-      <TemplateHeader onBackClick={handleBackToDashboard} onAddClick={handleCircleClick} />
+      <TemplateHeader onBackClick={handleBackToDashboard} onAddClick={handleCircleClick} onMenuClick={toggleSidebar} />
       <div className="flex">
-        <TemplateSidebar />
+        <TemplateSidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
         <main className="flex-1">
           <TemplateList />
         </main>
