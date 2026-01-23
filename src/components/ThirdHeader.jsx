@@ -12,20 +12,21 @@ const TemplateHeader = ({ onBackClick }) => {
         {/* Left section - Back arrow and title */}
          <img src={header1} alt="" style={{height:"30px",width:"30px"}}/>
         
-        <div className="template-header-left" style={{marginLeft: "-8rem"}}>
+        <div className="template-header-left" style={{marginLeft: "-2rem"}}>
           
-          <h1 className="template-header-title">Template list</h1>
+          <h1 className="template-header-title"style={{marginRight:"4rem"}}>Template list</h1>
         </div>
 
         {/* Center section - Search box */}
-        <div className="template-search-container" style={{marginLeft: "-8rem"}}>
+        <div className="template-search-container" style={{marginLeft: "-4rem"}}>
           <Search className="template-search-icon" />
           <input 
             type="text" 
             placeholder="Search" 
             className="template-search-input"
           />
-          <svg className="template-search-right-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" >
+          
+          <svg className="template-search-right-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" >
             <line x1="4" y1="8" x2="10" y2="8"></line>
             <circle cx="13" cy="8" r="3"></circle>
             <line x1="16" y1="8" x2="20" y2="8"></line>

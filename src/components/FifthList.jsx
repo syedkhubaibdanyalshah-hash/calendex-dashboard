@@ -5,49 +5,63 @@ const FifthList = ({ onNext }) => {
     <div className="notification-campaign">
       <div className="campaign-body">
         <div className="main-content">
-          <div className="left-card"style={{marginRight:"3px"}}>
+          <div className="left-card"style={{marginRight:"-10px",marginTop:"-3px"}}>
             <div className="card">
-              <div className="card-label">Template Name</div>
-              <div className="card-value">Slot Updated Notification</div>
-              <div className="dropdown-arrow">▼</div>
+              <div className="card-label"style={{marginLeft:"1px"}}>Template Name</div>
+              <div className="card-value"style={{marginLeft:"1px"}}>Slot Updated Notification</div>
+              <div className="dropdown-arrow">
+ 
+              </div>
             </div>
           </div>
           
           <div className="cards-grid"style={{marginRight:"6rem"}}>
-            <div className="card">
+            <div className="card"style={{backgroundColor:"#F8F8F8"}}>
               <div className="card-label">Campaign Name</div>
               <div className="card-value">Slot Updated Notification</div>
-              <div className="dropdown-arrow">▼</div>
+              <div className="dropdown-arrow">
+             
+              </div>
             </div>
             
-            <div className="card">
+            <div className="card"style={{backgroundColor:"#F8F8F8"}}>
               <div className="card-label">Trigger</div>
               <div className="card-value">Appointment Booked</div>
-              <div className="dropdown-arrow">▼</div>
+              <div className="dropdown-arrow">
+                <span className="dropdown-icon">▼</span>
+              </div>
             </div>
             
-            <div className="card">
+            <div className="card"style={{backgroundColor:"#F8F8F8"}}>
               <div className="card-label">Notification Purpose</div>
               <div className="card-value">Slot Updated</div>
-              <div className="dropdown-arrow">▼</div>
+              <div className="dropdown-arrow">
+                <span className="dropdown-icon">▼</span>
+              </div>
             </div>
             
-            <div className="card">
+            <div className="card"style={{backgroundColor:"#F8F8F8"}}>
               <div className="card-label">Repeat Pattern</div>
               <div className="card-value">Once</div>
-              <div className="dropdown-arrow">▼</div>
+              <div className="dropdown-arrow">
+                <span className="dropdown-icon">▼</span>
+              </div>
             </div>
             
-            <div className="card">
+            <div className="card"style={{backgroundColor:"#F8F8F8"}}>
               <div className="card-label">Channel</div>
               <div className="card-value">Both (Push Notification, In App)</div>
-              <div className="dropdown-arrow">▼</div>
+              <div className="dropdown-arrow">
+                <span className="dropdown-icon">▼</span>
+              </div>
             </div>
             
-            <div className="card">
+            <div className="card"style={{backgroundColor:"#F8F8F8"}}>
               <div className="card-label">Group1</div>
               <div className="card-value">Group 1 (256 people)</div>
-              <div className="dropdown-arrow">▼</div>
+              <div className="dropdown-arrow">
+                <span className="dropdown-icon">▼</span>
+              </div>
             </div>
           </div>
         </div>

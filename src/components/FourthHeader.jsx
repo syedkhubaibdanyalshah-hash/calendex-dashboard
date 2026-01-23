@@ -1,25 +1,39 @@
-import { Settings } from 'lucide-react'
-import './TemplateHeader.css'
+import './FourthHeader.css'
 import header1 from '../assets/header1.png'
+import smartphone from '../assets/smartphone 1.png'
+import laptop from '../assets/laptop (1) 1.png'
+import nnIcon from '../assets/nn.png'
 
 const FourthHeader = () => {
   return (
-    <header className="template-header">
-      <div className="template-header-content">
-        {/* Left section - icon and title */}
-        <img src={header1} alt="" style={{height:"30px",width:"30px"}}/>
-        
-        <div className="template-header-left">
-          <h1 className="template-header-title">Components Panel</h1>
+    <header className="edit-template-header">
+      <div className="edit-header-content">
+        {/* Left section - header1 image and title */}
+        <div className="edit-header-left">
+          <img src={header1} alt="header" className="header-icon" />
+          <h1 className="edit-header-title">Edit Notification Template</h1>
         </div>
 
-        {/* Right section - Add, Settings */}
-        <div className="template-header-right" style={{marginLeft:"auto"}}>
-          <button className="template-add-button">Add</button>
-          <button className="template-settings-button">
-            <Settings className="template-settings-icon" />
-          </button>
+        {/* Center section - Mobile/Desktop toggle */}
+        <div className="edit-header-center">
+          <div className="device-toggle">
+            <button className="device-btn">
+              <img src={smartphone} alt="mobile" className="device-icon" />
+              Mobile
+            </button>
+            <button className="device-btn active">
+              <img src={laptop} alt="desktop" className="device-icon" />
+              Desktop
+            </button>
+          </div>
+          <div className="changes-saved">
+            <span className="saved-text">Changes Saved</span>
+            <img src={nnIcon} alt="nn" className="nn-icon" />
+          </div>
         </div>
+
+        {/* Right section - Profile */}
+      
       </div>
     </header>
   )

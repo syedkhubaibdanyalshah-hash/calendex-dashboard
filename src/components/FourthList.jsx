@@ -1,12 +1,16 @@
 import './FourthList.css'
+import arrowIcon from '../assets/arrow.svg'
+import tIcon from '../assets/t.svg'
+import rightIcon from '../assets/right.svg'
+import boxIcon from '../assets/box.png'
 
 const FourthList = ({ onNext }) => {
   const components = [
-    { icon: '⬜', name: 'Icon', type: 'icon' },
-    { icon: '⬜', name: 'Card', type: 'card' },
+    { icon: boxIcon, name: 'Icon', type: 'icon' },
+    { icon: boxIcon, name: 'Card', type: 'card' },
     { icon: 'H', name: 'Heading + Text + Image', type: 'heading' },
-    { icon: 'T', name: 'Text', type: 'text' },
-    { icon: '↗', name: 'Button', type: 'button' },
+    { icon: '', name: 'Text', type: 'text' },
+    { icon: '', name: 'Button', type: 'button' },
     { icon: '—', name: 'Divider', type: 'divider' },
     { icon: '⌐', name: 'Spacer', type: 'spacer' }
   ];
@@ -17,11 +21,23 @@ const FourthList = ({ onNext }) => {
       <div className="components-panel">
         {components.map((component, index) => (
           <div key={index} className="component-item">
+            {component.type === 'button' && (
+              <img src={arrowIcon} alt="arrow" className="component-arrow-icon" />
+            )}
+            {component.type === 'text' && (
+              <img src={tIcon} alt="t-icon" className="component-t-icon" />
+            )}
             <div className="component-left">
               <div className="component-icon">
-                {component.icon}
+                {(component.type === 'icon' || component.type === 'card') ? (
+                  <img src={component.icon} alt="box-icon" style={{height:"16px", width:"16px"}} />
+                ) : (
+                  component.icon
+                )}
               </div>
-              <span className="component-name">{component.name}</span>
+              <span className="component-name">
+                {component.name}
+              </span>
             </div>
             <div className="component-add">
               +
@@ -56,24 +72,26 @@ const FourthList = ({ onNext }) => {
                 {/* Light grey container for Previous and New appointments */}
                 <div className="fourth-appointment-container">
                   <div className="fourth-appointment-comparison">
-                    <div className="fourth-appointment-time previous">
-                      <div className="fourth-time-label">Previous</div>
-                      <div className="fourth-date-time">
-                        <div className="fourth-date">
-                          <svg className="fourth-calendar-icon" viewBox="0 0 24 24" fill="none">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" strokeWidth="2"/>
-                            <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" strokeWidth="2"/>
-                            <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" strokeWidth="2"/>
-                          </svg>
-                          Jan 15, 2025
-                        </div>
-                        <div className="fourth-time">
-                          <svg className="fourth-clock-icon" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                            <polyline points="12,6 12,12 16,14" stroke="currentColor" strokeWidth="2"/>
-                          </svg>
-                          10:00 AM
+                    <div className="fourth-appointment-section">
+                      <div className="fourth-time-label-outside">Previous</div>
+                      <div className="fourth-appointment-time previous">
+                        <div className="fourth-date-time">
+                          <div className="fourth-date">
+                            <svg className="fourth-calendar-icon" viewBox="0 0 24 24" fill="none">
+                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2"/>
+                              <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" strokeWidth="2"/>
+                              <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" strokeWidth="2"/>
+                              <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" strokeWidth="2"/>
+                            </svg>
+                            Jan 15, 2025
+                          </div>
+                          <div className="fourth-time">
+                            <svg className="fourth-clock-icon" viewBox="0 0 24 24" fill="none">
+                              <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                              <polyline points="12,6 12,12 16,14" stroke="currentColor" strokeWidth="2"/>
+                            </svg>
+                            10:00 AM
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -84,24 +102,26 @@ const FourthList = ({ onNext }) => {
                       </svg>
                     </div>
                     
-                    <div className="fourth-appointment-time new">
-                      <div className="fourth-time-label">New</div>
-                      <div className="fourth-date-time">
-                        <div className="fourth-date">
-                          <svg className="fourth-calendar-icon" viewBox="0 0 24 24" fill="none">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" strokeWidth="2"/>
-                            <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" strokeWidth="2"/>
-                            <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" strokeWidth="2"/>
-                          </svg>
-                          Jan 15, 2025
-                        </div>
-                        <div className="fourth-time">
-                          <svg className="fourth-clock-icon" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                            <polyline points="12,6 12,12 16,14" stroke="currentColor" strokeWidth="2"/>
-                          </svg>
-                          2:30 PM
+                    <div className="fourth-appointment-section">
+                      <div className="fourth-time-label-outside" style={{color: "#10b981"}}>New</div>
+                      <div className="fourth-appointment-time new">
+                        <div className="fourth-date-time">
+                          <div className="fourth-date">
+                            <svg className="fourth-calendar-icon" viewBox="0 0 24 24" fill="none">
+                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2"/>
+                              <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" strokeWidth="2"/>
+                              <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" strokeWidth="2"/>
+                              <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" strokeWidth="2"/>
+                            </svg>
+                            Jan 15, 2025
+                          </div>
+                          <div className="fourth-time">
+                            <svg className="fourth-clock-icon" viewBox="0 0 24 24" fill="none">
+                              <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                              <polyline points="12,6 12,12 16,14" stroke="currentColor" strokeWidth="2"/>
+                            </svg>
+                            2:30 PM
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -124,19 +144,27 @@ const FourthList = ({ onNext }) => {
       <div className="menu-panel"style={{marginbottom:"8rem",marginRight:"2rem"}}>
         <div className="menu-item">
           <span className="menu-text">Preview</span>
-          <div className="menu-arrow">▶</div>
+          <div className="menu-arrow">
+            <img src={rightIcon} alt="right" className="menu-right-icon" />
+          </div>
         </div>
         <div className="menu-item">
           <span className="menu-text">Content</span>
-          <div className="menu-arrow">▶</div>
+          <div className="menu-arrow">
+            <img src={rightIcon} alt="right" className="menu-right-icon" />
+          </div>
         </div>
         <div className="menu-item">
           <span className="menu-text">Style</span>
-          <div className="menu-arrow">▶</div>
+          <div className="menu-arrow">
+            <img src={rightIcon} alt="right" className="menu-right-icon" />
+          </div>
         </div>
         <div className="menu-item">
           <span className="menu-text">Advanced</span>
-          <div className="menu-arrow">▶</div>
+          <div className="menu-arrow">
+            <img src={rightIcon} alt="right" className="menu-right-icon" />
+          </div>
         </div>
       </div>
     </div>

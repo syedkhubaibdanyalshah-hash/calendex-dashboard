@@ -1,7 +1,7 @@
 /* Template List Content Styles */
 .template-list-content {
   padding: 24px;
-  background-color: #f8f9fa;
+  background-color: #F8F9FE;
   min-height: calc(100vh - 100px);
   overflow-x: hidden;
   width: 100%;
@@ -57,6 +57,8 @@
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
   color: #1f2937;
+  line-height: 28px;
+  letter-spacing: 0%;
 }
 
 .name-with-circle {
@@ -74,31 +76,39 @@
 }
 
 .trigger-type {
-  color: #ffd700;
+  color: #818181;
   font-size: 14px;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
+  line-height: 28px;
+  letter-spacing: 0%;
 }
 
 .channels {
-  color: #ffd700;
+  color: #818181;
   font-size: 14px;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
+  line-height: 28px;
+  letter-spacing: 0%;
 }
 
 .created-by {
-  color: #ffd700;
+  color: #818181;
   font-size: 14px;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
+  line-height: 28px;
+  letter-spacing: 0%;
 }
 
 .created-date {
-  color: #ffd700;
+  color: #818181;
   font-size: 14px;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
+  line-height: 28px;
+  letter-spacing: 0%;
 }
 
 .status-badge {
@@ -123,7 +133,7 @@
 }
 
 .status-badge.active .status-circle {
-  background-color: #16a34a;
+  background-color: #38F238;
 }
 
 .status-badge.inactive {
@@ -131,7 +141,7 @@
 }
 
 .status-badge.inactive .status-circle {
-  background-color: #dc2626;
+  background-color: #F2383B;
 }
 
 /* Responsive Design */
@@ -262,5 +272,6 @@
   .status-circle {
     width: 6px;
     height: 6px;
+    
   }
 }

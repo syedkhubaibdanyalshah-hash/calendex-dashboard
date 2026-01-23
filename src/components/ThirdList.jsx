@@ -114,7 +114,7 @@ const ThirdList = ({ onNext }) => {
       
       {/* Next Button */}
       <div className="next-button-container">
-        <button className="next-button" onClick={onNext} style={{marginLeft:"30rem",marginTop:"6rem",width:"300px",height:"40px",color:"#ffff",backgroundColor:"#FFD705",borderRadius:"8px"}}>Next</button>
+        <button className="next-button" onClick={onNext} style={{marginLeft:"30rem",marginTop:"2.5rem",width:"300px",height:"40px",color:"#ffff",backgroundColor:"#FFD705",borderRadius:"8px"}}>Next</button>
       </div>
     </div>
   )

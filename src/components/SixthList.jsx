@@ -6,7 +6,7 @@ const SixthList = () => {
     <div className="preview-page">
       <div className="preview-container">
         {/* Left Side Panel */}
-        <div className="left-panel">
+        <div className="left-panel"style={{marginLeft:"20px"}}>
           <div className="info-item">
             <div className="info-label">Template Name</div>
             <div className="info-value">Slot Updated Notification</div>
@@ -31,12 +31,12 @@ const SixthList = () => {
         {/* Center Preview Card */}
         <div className="center-preview">
           <div className="campaign-name-header">
-            <div className="campaign-label">Campaign Name</div>
+            <div className="campaign-label"style={{marginLeft:"8px",marginTop:"-6px"}}>Campaign Name</div>
             <div className="campaign-value">Slot Updated Notification</div>
           </div>
           
           <div className="preview-card"style={{marginLeft:"2rem"}}>
-            <div className="preview-card-inner">
+            <div className="preview-card-inner"style={{marginRight:"4rem"}}>
               <div className="success-icon">
                 <img src={dashboard2} alt="" style={{borderRadius:"4rem"}}/>
                 {/* <svg viewBox="0 0 24 24" fill="none">
@@ -53,7 +53,7 @@ const SixthList = () => {
                   <div className="appointment-box-container">
                     <div className="appointments-inner-container">
                       <div className="appointment-column">
-                        <div className="column-label">Previous</div>
+                        <div className="column-label" style={{marginLeft: "30px"}}>Previous</div>
                         <div className="appointment-side previous-side"style={{width:"100px",marginLeft:"4.5rem"}}>
                           <div className="datetime-info">
                             <div className="date-row">
@@ -83,8 +83,8 @@ const SixthList = () => {
                       </div>
                       
                       <div className="appointment-column"style={{width:"100px",marginRight:"133px"}}>
-                        <div className="column-label new-column-label">New</div>
-                        <div className="appointment-side new-side"style={{width:"100px"}}>
+                        <div className="column-label new-column-label" style={{marginLeft: "30px"}}>New</div>
+                        <div className="appointment-side new-side"style={{width:"100px",backgroundColor:"#F0FDF4"}}>
                           <div className="datetime-info new-datetime"style={{width:"110px"}}>
                             <div className="date-row">
                               <svg className="icon" viewBox="0 0 24 24" fill="none">
@@ -116,7 +116,7 @@ const SixthList = () => {
         </div>
 
         {/* Right Side Panel */}
-        <div className="right-panel">
+        <div className="right-panel"style={{marginRight:"20px",marginBottom:"10px"}}>
           <div className="send-btn-container">
             <button className="send-btn">Send</button>
           </div>

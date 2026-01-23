@@ -1,7 +1,7 @@
 /* Third List Component Styles - Same as TemplateList + Next Button */
 .template-list-content {
   padding: 24px;
-  background-color: #f8f9fa;
+  background-color: #F8F9FE;
   min-height: calc(100vh - 100px);
   position: relative;
   height: 560px;

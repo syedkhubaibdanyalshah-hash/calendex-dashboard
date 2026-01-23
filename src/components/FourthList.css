@@ -182,7 +182,7 @@
   border: 1px solid #e9ecef;
   border-radius: 10px;
   font-family: roboto,sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color: #131313;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -192,7 +192,7 @@
   align-items: center;
   text-align: center;
   height:38px;
-  width:160px;
+  width:175px;
   padding-bottom: 4px;
 }
 
@@ -573,9 +573,180 @@
   }
 }
 
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 320px) {
+  .page-container {
+    flex-direction: column;
+    padding: 8px;
+    gap: 15px;
+    overflow-x: hidden;
+  }
+  
+  .components-panel {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 15px;
+    padding: 4px 12px 80px 12px;
+  }
+  
+  .component-item {
+    padding: 0px 8px 0px 0px;
+    margin-bottom: 6px;
+    min-height: 14px;
+  }
+  
+  .component-name {
+    font-size: 10px;
+  }
+  
+  .component-add {
+    font-size: 20px;
+    width: 26px;
+    height: 26px;
+  }
+  
+  .main-content {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .fourth-notification-container {
+    margin-left: 50%;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .fourth-notification-card {
+    padding: 10px 15px;
+    height: 50px;
+  }
+  
+  .fourth-notification-label {
+    font-size: 10px;
+    top: 6px;
+    left: 15px;
+  }
+  
+  .fourth-notification-title {
+    font-size: 13px;
+    padding-top: 18px;
+    margin-left: -15px;
+  }
+  
+  .fourth-appointment-modal {
+    min-height: 350px;
+  }
+  
+  .fourth-modal-content {
+    padding: 20px 15px 15px;
+  }
+  
+  .fourth-modal-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .fourth-modal-subtitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .fourth-appointment-container {
+    max-width: 100%;
+    padding: 15px 10px;
+  }
+  
+  .fourth-appointment-comparison {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .fourth-appointment-time {
+    min-width: 100px;
+    padding: 12px 14px;
+  }
+  
+  .fourth-time-label {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  
+  .fourth-date, .fourth-time {
+    font-size: 11px;
+  }
+  
+  .fourth-arrow {
+    transform: rotate(90deg);
+    margin: 5px 0;
+  }
+  
+  .fourth-ok-button {
+    min-width: 100%;
+    font-size: 14px;
+    padding: 8px 20px;
+    height: 40px;
+  }
+  
+  .fourth-upload-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 12px;
+  }
+  
+  .fourth-upload-btn {
+    height: 32px;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .next-button-container,
+  .menu-panel {
+    position: static !important;
+    width: 100%;
+    margin: 15px 0;
+    right: auto;
+    top: auto;
+  }
+  
+  .next-button-floating {
+    min-width: 100%;
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+  }
+  
+  .menu-panel {
+    width: 100%;
+    padding: 12px 0;
+  }
+  
+  .menu-item {
+    padding: 10px 15px;
+  }
+  
+  .menu-text {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 480px) {
+  .page-container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+    overflow-x: hidden;
+  }
+  
+  .components-panel {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+    padding: 4px 15px 100px 15px;
+  }
+  
   .component-item {
     padding: 0px 12px 0px 0px;
+    margin-bottom: 8px;
   }
   
   .component-name {
@@ -588,8 +759,23 @@
     height: 30px;
   }
   
+  .main-content {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .fourth-notification-container {
+    margin-left: 50%;
+    max-width: 100%;
+    width: 100%;
+  }
+  
   .fourth-notification-title {
     font-size: 14px;
+  }
+  
+  .fourth-appointment-modal {
+    min-height: 400px;
   }
   
   .fourth-modal-title {
@@ -620,4 +806,59 @@
     width: 100%;
     max-width: 100%;
   }
+  
+  .next-button-container,
+  .menu-panel {
+    position: static !important;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .next-button-floating {
+    min-width: 150px;
+    width: 100%;
+  }
+}
+/* Arrow Icon for Button Component */
+.component-arrow-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  opacity: 1;
+  vertical-align: middle;
+  filter: brightness(0);
+  flex-shrink: 0;
+}
+
+/* T Icon for Text Component */
+.component-t-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  opacity: 1;
+  vertical-align: middle;
+  filter: brightness(0);
+  flex-shrink: 0;
+}
+
+/* Adjust Button component left margin */
+.component-item:has(.component-arrow-icon) .component-left {
+  margin-left: -30px;
+}
+
+/* Adjust Text component left margin */
+.component-item:has(.component-t-icon) .component-left {
+  margin-left: -30px;
+}
+/* Make H icon bigger for heading component */
+.component-item:nth-child(3) .component-icon {
+  font-size: 18px;
+  font-weight: 600;
+}
+/* Right Icon for Menu Panel */
+.menu-right-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(73%) sepia(0%) saturate(0%) hue-rotate(158deg) brightness(95%) contrast(89%);
 }

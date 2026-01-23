@@ -1,5 +1,5 @@
 import { Settings } from 'lucide-react'
-import './TemplateHeader.css'
+import './FifthHeader.css'
 import header1 from '../assets/header1.png'
 
 const FifthHeader = () => {

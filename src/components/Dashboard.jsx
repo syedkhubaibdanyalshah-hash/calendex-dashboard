@@ -114,7 +114,7 @@ const Dashboard = () => {
 
       {/* Performance Chart Section */}
       <div className="chart-section"style={{backgroundColor:"#ffff"}}>
-        <h2 className="chart-title"style={{backgroundColor:"#ffff"}}>Performance Over Time</h2>
+        <h2 className="chart-title"style={{backgroundColor:"#ffff",marginLeft:"13px",marginTop:"10px"}}>Performance Over Time</h2>
         <div className="chart-container"style={{backgroundColor:"#ffff"}}>
           <div className="chart-placeholder"style={{backgroundColor:"#ffff"}}>
             <div className="chart-legend"style={{backgroundColor:"#ffff"}}>
@@ -163,20 +163,20 @@ const Dashboard = () => {
                 <line x1="840" y1="303" x2="840" y2="308" stroke="#6b7280" strokeWidth="1.5"/>
                 
                 {/* Y-axis labels - equal spacing from top to bottom */}
-                <text x="25" y="18" fontSize="11" fill="#374151">600</text>
-                <text x="25" y="88.5" fontSize="11" fill="#374151">450</text>
-                <text x="25" y="159" fontSize="11" fill="#374151">300</text>
-                <text x="25" y="229.5" fontSize="11" fill="#374151">150</text>
-                <text x="38" y="303" fontSize="11" fill="#374151">0</text>
+                <text x="25" y="21" fontSize="11" fill="#6B7280">600</text>
+                <text x="25" y="91.5" fontSize="11" fill="#6B7280">450</text>
+                <text x="25" y="162" fontSize="11" fill="#6B7280">300</text>
+                <text x="25" y="232.5" fontSize="11" fill="#6B7280">150</text>
+                <text x="38" y="306" fontSize="11" fill="#6B7280">0</text>
                 
                 {/* X-axis labels */}
-                <text x="50" y="317" fontSize="11" fill="#374151">Dec 24</text>
-                <text x="200" y="317" fontSize="11" fill="#374151">Dec 25</text>
-                <text x="330" y="317" fontSize="11" fill="#374151">Dec 26</text>
-                <text x="460" y="317" fontSize="11" fill="#374151">Dec 27</text>
-                <text x="590" y="317" fontSize="11" fill="#374151">Dec 28</text>
-                <text x="720" y="317" fontSize="11" fill="#374151">Dec 29</text>
-                <text x="830" y="317" fontSize="11" fill="#374151">Dec 30</text>
+                <text x="50" y="317" fontSize="11" fill="#6B7280">Dec 24</text>
+                <text x="200" y="317" fontSize="11" fill="#6B7280">Dec 25</text>
+                <text x="330" y="317" fontSize="11" fill="#6B7280">Dec 26</text>
+                <text x="460" y="317" fontSize="11" fill="#6B7280">Dec 27</text>
+                <text x="590" y="317" fontSize="11" fill="#6B7280">Dec 28</text>
+                <text x="720" y="317" fontSize="11" fill="#6B7280">Dec 29</text>
+                <text x="830" y="317" fontSize="11" fill="#6B7280">Dec 30</text>
                 
                 {/* Sent line (cyan) - Top line */}
                 <polyline
@@ -300,22 +300,22 @@ const Dashboard = () => {
               )}
               
               {/* Legend with icons */}
-              <div style={{position: 'absolute', bottom: '0px', left: 'calc(50% - 20px)', transform: 'translateX(-50%)', display: 'flex', gap: '20px', alignItems: 'center'}}>
+              <div style={{position: 'absolute', bottom: '-16px', left: 'calc(50% + 16px)', transform: 'translateX(-50%)', display: 'flex', gap: '20px', alignItems: 'center'}}>
                 <div style={{display: 'flex', alignItems: 'center', gap: '4px'}}>
-                  <img src={senterro} alt="" style={{height: '12px', width: '12px'}} />
-                  <span style={{fontSize: '14px', color: '#06b6d4', fontWeight: '500'}}>Sent</span>
+                  <img src={senterro} alt="" style={{height: '14px', width: '14px', filter: 'brightness(0) saturate(100%) invert(70%) sepia(98%) saturate(1151%) hue-rotate(166deg) brightness(91%) contrast(101%)'}} />
+                  <span style={{fontSize: '16px', color: '#06b6d4', fontWeight: '400', fontFamily: 'Arimo, sans-serif'}}>Sent</span>
                 </div>
                 <div style={{display: 'flex', alignItems: 'center', gap: '4px'}}>
-                  <img src={senterro} alt="" style={{height: '12px', width: '12px'}} />
-                  <span style={{fontSize: '14px', color: '#10b981', fontWeight: '500'}}>Delivered</span>
+                  <img src={senterro} alt="" style={{height: '14px', width: '14px', filter: 'brightness(0) saturate(100%) invert(64%) sepia(98%) saturate(464%) hue-rotate(103deg) brightness(94%) contrast(86%)'}} />
+                  <span style={{fontSize: '16px', color: '#10b981', fontWeight: '400', fontFamily: 'Arimo, sans-serif'}}>Delivered</span>
                 </div>
                 <div style={{display: 'flex', alignItems: 'center', gap: '4px'}}>
-                  <img src={senterro} alt="" style={{height: '12px', width: '12px'}} />
-                  <span style={{fontSize: '14px', color: '#8b5cf6', fontWeight: '500'}}>Opened</span>
+                  <img src={senterro} alt="" style={{height: '14px', width: '14px', filter: 'brightness(0) saturate(100%) invert(47%) sepia(69%) saturate(959%) hue-rotate(240deg) brightness(98%) contrast(95%)'}} />
+                  <span style={{fontSize: '16px', color: '#8b5cf6', fontWeight: '400', fontFamily: 'Arimo, sans-serif'}}>Opened</span>
                 </div>
                 <div style={{display: 'flex', alignItems: 'center', gap: '4px'}}>
-                  <img src={senterro} alt="" style={{height: '12px', width: '12px'}} />
-                  <span style={{fontSize: '14px', color: '#f59e0b', fontWeight: '500'}}>Clicked</span>
+                  <img src={senterro} alt="" style={{height: '14px', width: '14px', filter: 'brightness(0) saturate(100%) invert(69%) sepia(89%) saturate(1588%) hue-rotate(7deg) brightness(101%) contrast(101%)'}} />
+                  <span style={{fontSize: '16px', color: '#f59e0b', fontWeight: '400', fontFamily: 'Arimo, sans-serif'}}>Clicked</span>
                 </div>
               </div>
             </div>
@@ -332,16 +332,16 @@ const Dashboard = () => {
           {/* Push Notification Preview Card */}
           <div className="preview-card">
             <h3 className="preview-card-title">Push Notification Preview</h3>
-            <div className="notification-preview">
-              <div className="notification-time"style={{marginRight:"15rem"}}>9:41</div>
+            <div className="notification-preview"style={{backgroundColor:"#F8F9FE"}}>
+              <div className="notification-time"style={{marginRight:"18rem"}}>9:41</div>
               <div className="notification-content"style={{height:"129px",width:"328px",borderRadius:"14px",marginTop:"1rem"}}>
                 <div className="notification-header">
                   <div className="notification-icon">
                     <div className="app-icon"style={{height:"40px",width:"40px"}}> <img src={bigcardicon} alt="" style={{height:"20px",width:"20px"}}/></div>
                   </div>
                   <div className="notification-text">
-                    <div className="notification-title"style={{fontFamily:"roboto",fontSize:"20px",fontWeight:"700",marginBottom:"8px"}}>Appointment Updated</div>
-                    <div className="notification-message"style={{fontFamily:"roboto",fontSize:"14px",fontWeight:"400",color:"#9ca3af",lineHeight:"1.5"}}>Your appointment has been rescheduled to 2:30 PM on Jan 15.</div>
+                    <div className="notification-title"style={{fontFamily:"roboto",fontSize:"16px",fontWeight:"700",marginBottom:"4px"}}>Appointment Updated</div>
+                    <div className="notification-message"style={{fontFamily:"roboto",fontSize:"14px",fontWeight:"400",color:"#9ca3af",lineHeight:"20px",marginTop:"5px",paddingRight:'20px',marginLeft:"-14px"}}>Your appointment has been <br/><span style={{marginLeft:"13px",fontSize:"13.1px",marginRight:"-21px"}}>rescheduled to 2:30 PM on Jan 15.</span></div>
                   </div>
                   <div className="notification-arrow">›</div>
                 </div>
@@ -354,37 +354,35 @@ const Dashboard = () => {
           </div>
 
           {/* In-App Message Preview Card */}
-          <div className="preview-card">
+          <div className="preview-card" style={{marginLeft:"1rem"}}>
             <h3 className="preview-card-title">In-App Message Preview</h3>
-              <div className="in-app-content"style={{height:"472px",width:"360px",marginLeft:"115px"}}>
-                <img src={dashboard2} alt="" style={{height:"80px",width:"80px",borderRadius:"26843500px",marginTop:"16px",marginLeft:"110px"}}/>
-                <h4 className="in-app-title"style={{fontSize:"24px",fontFamily:"roboto",fontWeight:"700,bold",marginTop:"10px"}}>Appointment Updated!</h4>
-                <p className="in-app-message"style={{fontSize:"12px",fontFamily:"roboto",fontWeight:"400"}}>Your appointment has been successfully rescheduled</p>
+              <div className="in-app-content">
+                <img src={dashboard2} alt="" style={{height:"80px",width:"80px",borderRadius:"50%",marginTop:"12px",marginLeft:"7rem"}}/>
+                <h4 className="in-app-title" style={{fontSize:"24px",fontFamily:"roboto",fontWeight:"700",marginTop:"10px"}}>Appointment Updated!</h4>
+                <p className="in-app-message" style={{fontSize:"12px",fontFamily:"roboto",fontWeight:"400"}}>Your appointment has been successfully rescheduled</p>
                 
                 <div className="time-change">
                   <div className="time-section">
                     <span className="time-label">Previous</span>
                     <div className="time-box">
-
-                      <span className="date"style={{display:"flex",gap:"7px"}}><img src={bigcardicon2} alt="" style={{height:"16px",width:"16px",marginTop:"3px"}}/> Jan 15, 2025</span>
-                      <span className="time"style={{display:"flex",gap:"7px",marginTop:"5px"}}><img src={bigcardicon3} alt="" style={{height:"16px",width:"16px",marginTop:"3px"}}/> 12:00 AM</span>
+                      <span className="date" style={{display:"flex",gap:"7px",alignItems:"center",justifyContent:"center"}}><img src={bigcardicon2} alt="" style={{height:"16px",width:"16px"}}/> Jan 15, 2025</span>
+                      <span className="time" style={{display:"flex",gap:"7px",marginTop:"5px",alignItems:"center",justifyContent:"center",marginRight:"13px"}}><img src={bigcardicon3} alt="" style={{height:"16px",width:"16px"}}/> <span style={{textDecoration:"line-through"}}>10:00 AM</span></span>
                     </div>
                   </div>
                   
-                  <div className="arrow-right"> <img src={erro2} alt="" style={{marginTop:"22px"}}/> </div>
+                  <div className="arrow-right"> <img src={erro2} alt="" style={{marginTop:"22px", height:"24px", width:"24px"}}/> </div>
                   
                   <div className="time-section">
                     <span className="time-label new">New</span>
                     <div className="time-box new">
-                      <span className="date" style={{display:"flex",gap:"9px"}}> <img src={bigcardicon4} alt="" style={{height:"16px",width:"16px",marginTop:"3px"}}/>Jan 15, 2025</span>
-                      <span className="time"style={{display:"flex",gap:"9px",color:"#00A63E",marginTop:"5px"}}> <img src={bigcardicon6} alt="" style={{height:"16px",width:"16px",marginTop:"3px"}}/> 2:30 PM</span>
+                      <span className="date" style={{display:"flex",gap:"9px",alignItems:"center",justifyContent:"center"}}> <img src={bigcardicon4} alt="" style={{height:"16px",width:"16px"}}/>Jan 15, 2025</span>
+                      <span className="time" style={{display:"flex",gap:"9px",color:"#00A63E",marginTop:"5px",alignItems:"center",justifyContent:"center",marginRight:"19px"}}> <img src={bigcardicon6} alt="" style={{height:"16px",width:"16px"}}/> 2:30 PM</span>
                     </div>
                   </div>
                 </div>
                 
                 <button className="ok-button">OK</button>
               </div>
-            
           </div>
         </div>
       </div>

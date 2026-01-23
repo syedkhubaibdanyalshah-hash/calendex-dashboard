@@ -26,74 +26,55 @@ import SixthList from './components/SixthList'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard')
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen)
-  }
-
-  const closeSidebar = () => {
-    setIsSidebarOpen(false)
-  }
 
   const handleCreateNewClick = () => {
     setCurrentPage('templateList')
-    closeSidebar()
   }
 
   const handleBackToDashboard = () => {
     setCurrentPage('dashboard')
-    closeSidebar()
   }
 
   const handleCircleClick = () => {
     setCurrentPage('thirdPage')
-    closeSidebar()
   }
 
   const handleBackToTemplateList = () => {
     setCurrentPage('templateList')
-    closeSidebar()
   }
 
   const handleNextToFourth = () => {
     setCurrentPage('fourthPage')
-    closeSidebar()
   }
 
   const handleBackToThird = () => {
     setCurrentPage('thirdPage')
-    closeSidebar()
   }
 
   const handleNextToFifth = () => {
     setCurrentPage('fifthPage')
-    closeSidebar()
   }
 
   const handleBackToFourth = () => {
     setCurrentPage('fourthPage')
-    closeSidebar()
   }
 
   const handleNextToSixth = () => {
     setCurrentPage('sixthPage')
-    closeSidebar()
   }
 
   const handleBackToFifth = () => {
     setCurrentPage('fifthPage')
-    closeSidebar()
   }
 
   if (currentPage === 'dashboard') {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 overflow-x-hidden">
         <Navbar />
-        <Header onCreateNewClick={handleCreateNewClick} onMenuClick={toggleSidebar} />
-        <div className="flex">
-          <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-          <main className="flex-1">
+        <Header onCreateNewClick={handleCreateNewClick} />
+        <div className="flex flex-col lg:flex-row">
+          <Sidebar />
+          <main className="flex-1 w-full overflow-x-hidden">
             <Dashboard />
           </main>
         </div>
@@ -103,12 +84,12 @@ function App() {
 
   if (currentPage === 'thirdPage') {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 overflow-x-hidden">
         <ThirdNavbar onBackClick={handleBackToTemplateList} />
-        <ThirdHeader onBackClick={handleBackToTemplateList} onMenuClick={toggleSidebar} />
-        <div className="flex">
-          <ThirdSidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-          <main className="flex-1">
+        <ThirdHeader onBackClick={handleBackToTemplateList} />
+        <div className="flex flex-col lg:flex-row">
+          <ThirdSidebar />
+          <main className="flex-1 w-full overflow-x-hidden">
             <ThirdList onNext={handleNextToFourth} />
           </main>
         </div>
@@ -118,12 +99,12 @@ function App() {
 
   if (currentPage === 'fourthPage') {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 overflow-x-hidden">
         <FourthNavbar onBackClick={handleBackToThird} />
-        <FourthHeader onMenuClick={toggleSidebar} />
-        <div className="flex">
-          <FourthSidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-          <main className="flex-1">
+        <FourthHeader />
+        <div className="flex flex-col lg:flex-row">
+          <FourthSidebar />
+          <main className="flex-1 w-full overflow-x-hidden">
             <FourthList onNext={handleNextToFifth} />
           </main>
         </div>
@@ -133,12 +114,12 @@ function App() {
 
   if (currentPage === 'fifthPage') {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 overflow-x-hidden">
         <FifthNavbar onBackClick={handleBackToFourth} />
-        <FifthHeader onMenuClick={toggleSidebar} />
-        <div className="flex">
-          <FifthSidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-          <main className="flex-1">
+        <FifthHeader />
+        <div className="flex flex-col lg:flex-row">
+          <FifthSidebar />
+          <main className="flex-1 w-full overflow-x-hidden">
             <FifthList onNext={handleNextToSixth} />
           </main>
         </div>
@@ -148,12 +129,12 @@ function App() {
 
   if (currentPage === 'sixthPage') {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 overflow-x-hidden">
         <SixthNavbar onBackClick={handleBackToFifth} />
-        <SixthHeader onMenuClick={toggleSidebar} />
-        <div className="flex">
-          <SixthSidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-          <main className="flex-1">
+        <SixthHeader />
+        <div className="flex flex-col lg:flex-row">
+          <SixthSidebar />
+          <main className="flex-1 w-full overflow-x-hidden">
             <SixthList />
           </main>
         </div>
@@ -162,12 +143,12 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 overflow-x-hidden">
       <TemplateNavbar onBackClick={handleBackToDashboard} />
-      <TemplateHeader onBackClick={handleBackToDashboard} onAddClick={handleCircleClick} onMenuClick={toggleSidebar} />
-      <div className="flex">
-        <TemplateSidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-        <main className="flex-1">
+      <TemplateHeader onBackClick={handleBackToDashboard} onAddClick={handleCircleClick} />
+      <div className="flex flex-col lg:flex-row">
+        <TemplateSidebar />
+        <main className="flex-1 w-full overflow-x-hidden">
           <TemplateList />
         </main>
       </div>

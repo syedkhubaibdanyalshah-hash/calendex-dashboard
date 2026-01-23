@@ -1,5 +1,6 @@
 .preview-page {
   min-height: calc(80vh - 48px);
+  height: 60rem;
   background: linear-gradient(135deg, #e8eaf6 0%, #f3e5f5 100%);
   padding: 8px 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -66,7 +67,8 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   height: 63px;
   position: relative !important;
-  width: 700px;
+  width: 623px;
+  margin-left: 31px;
 }
 
 .campaign-label {
@@ -81,7 +83,7 @@
   font-size: 16px;
   color: #141313;
   font-weight: 500;
-  padding-top: 20px !important;
+  padding-top: 15px !important;
   margin-left: -17px !important;
   font-weight: 400;
 }
@@ -371,7 +373,7 @@
   border: 1px solid #ffffff;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
   width: 400px;
-  margin-left: 5.5rem;
+  margin-left: 4.5rem;
 }
 
 /* Responsive */
@@ -516,14 +518,204 @@
   }
 }
 
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 320px) {
+  .preview-page {
+    padding: 6px 8px;
+    height: auto;
+    min-height: calc(100vh - 100px);
+  }
+  
+  .preview-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .left-panel {
+    padding: 8px !important;
+    width: 100%;
+    min-height: 180px;
+    margin-right: 0;
+    margin-top: 8px;
+  }
+  
+  .info-item {
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+  }
+  
+  .info-label {
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+  
+  .info-value {
+    font-size: 12px;
+  }
+  
+  .center-preview {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .campaign-name-header {
+    padding: 10px 12px;
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+    margin-top: 15px;
+  }
+  
+  .campaign-label {
+    font-size: 10px;
+    position: static !important;
+  }
+  
+  .campaign-value {
+    font-size: 13px;
+    padding-top: 5px !important;
+    margin-left: 0 !important;
+  }
+  
+  .preview-card {
+    padding: 20px 12px;
+    height: auto;
+    min-height: 400px;
+    margin-top: 10px;
+  }
+  
+  .success-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .success-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .preview-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .preview-subtitle {
+    font-size: 11px;
+    margin-bottom: 18px;
+  }
+  
+  .appointment-comparison-box {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    padding: 10px 0;
+  }
+  
+  .appointments-inner-container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    margin-top: -30px;
+  }
+  
+  .appointment-side {
+    width: 100%;
+    min-width: 100%;
+    padding: 12px 14px;
+  }
+  
+  .side-label {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .datetime-info {
+    width: 100%;
+  }
+  
+  .date-row, .time-row {
+    font-size: 11px;
+  }
+  
+  .icon {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .arrow-icon {
+    transform: rotate(90deg);
+    margin: 8px 0;
+  }
+  
+  .ok-btn {
+    min-width: 100%;
+    padding: 10px 20px;
+    font-size: 12px;
+    height: 38px;
+  }
+  
+  .right-panel {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .send-btn-container {
+    width: 100%;
+    padding: 15px;
+    height: auto;
+    margin-top: 15px;
+  }
+  
+  .send-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+    height: 40px;
+    width: 100%;
+  }
+  
+  .action-menu {
+    width: 100%;
+    padding: 8px 0;
+    margin-top: -8px;
+  }
+  
+  .action-item {
+    padding: 12px 18px;
+  }
+  
+  .action-item span:first-child {
+    font-size: 13px;
+  }
+  
+  .preview-card-inner {
+    padding: 15px 10px;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 480px) {
   .preview-page {
     padding: 8px 10px;
+    height: auto;
+    min-height: calc(100vh - 100px);
+  }
+  
+  .preview-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
   
   .left-panel {
     padding: 10px !important;
+    width: 100%;
     min-height: 200px;
+    margin-right: 0;
   }
   
   .info-label {
@@ -534,20 +726,31 @@
     font-size: 14px;
   }
   
+  .center-preview {
+    width: 100%;
+    max-width: 100%;
+  }
+  
   .campaign-name-header {
     padding: 12px 15px;
+    width: 100%;
   }
   
   .campaign-label {
     font-size: 11px;
+    position: static !important;
   }
   
   .campaign-value {
     font-size: 14px;
+    padding-top: 8px !important;
+    margin-left: 0 !important;
   }
   
   .preview-card {
     padding: 25px 15px;
+    height: auto;
+    min-height: 500px;
   }
   
   .success-icon {
@@ -571,10 +774,15 @@
   
   .appointments-inner-container {
     padding: 12px;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
   }
   
   .appointment-side {
     padding: 14px 16px;
+    width: 100%;
+    min-width: 100%;
   }
   
   .side-label {
@@ -591,9 +799,20 @@
     height: 14px;
   }
   
+  .arrow-icon {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+  
   .ok-btn {
     padding: 12px 25px;
     font-size: 13px;
+    min-width: 100%;
+  }
+  
+  .right-panel {
+    flex-direction: column;
+    width: 100%;
   }
   
   .send-btn {
@@ -613,5 +832,7 @@
   
   .preview-card-inner {
     padding: 18px 12px;
+    width: 100%;
+    margin-left: 0;
   }
 }

@@ -21,7 +21,7 @@ const Sidebar = ({ onFirstIconClick }) => {
       </div> */}
       
       {/* White section with icons */}
-      <div className="sidebar-bottom"style={{gap:"20px"}}>
+      <div className="sidebar-bottom"style={{gap:"12px"}}>
         <div 
           className={`sidebar-icon-container ${selectedIcon === 0 ? 'active' : ''}`}
           style={{cursor: "pointer"}}

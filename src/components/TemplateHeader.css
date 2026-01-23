@@ -49,8 +49,9 @@
   align-items: center;
   position: relative;
   flex: 0 1 auto;
-  max-width: calc(300px + 10rem);
+  max-width: calc(300px + 13rem);
   margin-right: 40rem;
+  width: 300px;
 }
 
 .template-search-icon {
@@ -65,10 +66,13 @@
 
 .template-search-right-icon {
   position: absolute;
-  right: 12px;
-  width: 16px;
-  height: 16px;
+  right: 8px;
+  width: 27px;
+  height: 27px;
   color: #9ca3af;
+  background-color: #F7F7F7;
+  border-radius: 4px;
+  padding: 5px;
   z-index: 1;
   cursor: pointer;
   transition: color 0.2s ease;

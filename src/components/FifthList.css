@@ -1,5 +1,6 @@
 .notification-campaign {
   min-height: 100vh;
+  height: 50rem;
   background: #e8eaf6;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
@@ -10,7 +11,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  min-height: 60vh;
+  min-height: 100vh;
   padding-top: 28px;
 }
 
@@ -25,7 +26,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
-  gap: 20px;
+  gap: 15px;
   max-width: 1100px;
 }
 
@@ -68,12 +69,14 @@
   color: #AAAAAA;
   margin-bottom: 8px;
   text-transform: capitalize;
+  margin-left: -16px;
 }
 
 .card-value {
   font-size: 14px;
   color: #141313;
-  font-weight: 400;
+  margin-left: -16px;
+  font-weight: 500;
 }
 
 .dropdown-arrow {
@@ -112,7 +115,7 @@
   position: relative;
   top: 16px !important;
   left: 5px;
-  margin-left: 30px;
+  margin-left: 15px;
 }
 
 .next-btn:hover {
@@ -217,27 +220,130 @@
   }
 }
 
-@media (max-width: 480px) {
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 320px) {
   .campaign-body {
-    padding: 10px;
+    padding: 8px;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+  
+  .left-card {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .left-card .card {
+    min-width: 100% !important;
+    padding: 10px 20px;
   }
   
   .cards-grid {
-    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
   
   .card {
+    min-width: 100%;
     padding: 6px 20px;
-    min-height: 38px !important;
+    min-height: 35px !important;
   }
   
   .card-label {
     font-size: 10px;
+    margin-bottom: 5px;
+    margin-left: -12px;
+  }
+  
+  .card-value {
+    font-size: 11px;
+    margin-left: -12px;
+    font-weight: 500;
+    color: #141313;
+  }
+  
+  .dropdown-arrow {
+    right: 10px;
+    font-size: 8px;
+  }
+  
+  .next-button5-container {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 15px auto;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .next-btn5 {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+    top: 0 !important;
+    font-size: 12px;
+    padding: 8px 16px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .campaign-body {
+    padding: 10px;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .left-card {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .left-card .card {
+    min-width: 100% !important;
+    padding: 12px 25px;
+  }
+  
+  .cards-grid {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .card {
+    min-width: 100%;
+    padding: 6px 25px;
+    min-height: 38px !important;
+  }
+  
+  .card-label {
+    font-size: 11px;
     margin-bottom: 6px;
+    margin-left: -16px;
   }
   
   .card-value {
     font-size: 12px;
+    margin-left: -16px;
+    font-weight: 500;
+    color: #141313;
   }
   
   .dropdown-arrow {
@@ -245,9 +351,33 @@
     font-size: 9px;
   }
   
+  .next-button5-container {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    height: auto;
+    padding: 15px;
+  }
+  
   .next-btn5 {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+    top: 0 !important;
     font-size: 13px;
     padding: 8px 20px;
     height: 42px;
   }
+}
+/* Down Arrow Icon for Dropdowns */
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(73%) sepia(0%) saturate(0%) hue-rotate(158deg) brightness(95%) contrast(89%);
+}
+/* Reduce font weight for Template Name label in left card */
+.left-card .card-label {
+  font-weight: 300;
 }

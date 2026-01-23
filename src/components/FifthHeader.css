@@ -1,0 +1,303 @@
+/* Fifth Header Component Styles - Create Notification Campaign */
+.template-header {
+  width: 100%;
+  height: 60px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.template-header-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 16px;
+}
+
+.template-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.template-header-icon {
+  height: 30px;
+  width: 30px;
+  flex-shrink: 0;
+}
+
+.template-header-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.template-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.template-add-button {
+  background-color: #ffd700;
+  color: #745D00;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 30px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.template-add-button:hover {
+  background-color: #ffed4e;
+  transform: translateY(-1px);
+}
+
+.template-add-button:active {
+  transform: translateY(0);
+}
+
+.template-settings-button {
+  height: 40px;
+  width: 40px;
+  background-color: #f3f2f2;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.template-settings-button:hover {
+  background-color: #f3f4f6;
+}
+
+.template-settings-icon {
+  width: 16px;
+  height: 16px;
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .template-header-content {
+    gap: 12px;
+    padding: 0 16px;
+  }
+  
+  .template-header-title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .template-header {
+    height: auto;
+    min-height: 60px;
+  }
+  
+  .template-header-content {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  
+  .template-header-left {
+    gap: 10px;
+  }
+  
+  .template-header-icon {
+    height: 26px;
+    width: 26px;
+  }
+  
+  .template-header-title {
+    font-size: 15px;
+  }
+  
+  .template-header-right {
+    gap: 10px;
+  }
+  
+  .template-add-button {
+    width: 42px;
+    height: 28px;
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  
+  .template-settings-button {
+    width: 36px;
+    height: 36px;
+    padding: 7px;
+  }
+  
+  .template-settings-icon {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .template-header {
+    min-height: 52px;
+  }
+  
+  .template-header-content {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+  
+  .template-header-left {
+    gap: 8px;
+  }
+  
+  .template-header-icon {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .template-header-title {
+    font-size: 14px;
+  }
+  
+  .template-header-right {
+    gap: 8px;
+  }
+  
+  .template-add-button {
+    width: 38px;
+    height: 26px;
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+  
+  .template-settings-button {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+  }
+  
+  .template-settings-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .template-header {
+    min-height: 48px;
+  }
+  
+  .template-header-content {
+    padding: 6px 10px;
+    gap: 6px;
+  }
+  
+  .template-header-left {
+    gap: 6px;
+  }
+  
+  .template-header-icon {
+    height: 22px;
+    width: 22px;
+  }
+  
+  .template-header-title {
+    font-size: 13px;
+  }
+  
+  .template-header-right {
+    gap: 6px;
+  }
+  
+  .template-add-button {
+    width: 36px;
+    height: 24px;
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+  
+  .template-settings-button {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
+  
+  .template-settings-icon {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .template-header-content {
+    padding: 5px 8px;
+    gap: 5px;
+  }
+  
+  .template-header-title {
+    font-size: 12px;
+  }
+  
+  .template-add-button {
+    width: 34px;
+    height: 22px;
+    font-size: 8px;
+  }
+  
+  .template-settings-button {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 320px) {
+  .template-header-content {
+    padding: 4px 6px;
+  }
+  
+  .template-header-title {
+    font-size: 11px;
+  }
+  
+  .template-add-button {
+    width: 32px;
+    height: 20px;
+    font-size: 7px;
+  }
+  
+  .template-settings-button {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .template-settings-icon {
+    width: 12px;
+    height: 12px;
+  }
+}
